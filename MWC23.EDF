@@ -6,9 +6,9 @@
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb -30.04820 -60.75680 63.06820 12.06500))
-  (boundary (path signal 0.20320 1.27000 -33.02000 38.10000 -33.02000 38.10000 -7.62000
-   1.27000 -7.62000 1.27000 -33.02000))
+  (boundary (rect pcb -23.41880 -59.48680 79.57820 29.26080))
+  (boundary (path signal 0.20320 3.81000 -33.02000 38.10000 -33.02000 38.10000 -7.62000
+   3.81000 -7.62000 3.81000 -33.02000))
   (flip_style mirror_first)
   (layer TOP (type signal) (direction horizontal))
   (layer I1 (type signal) (direction off))
@@ -36,6 +36,7 @@
    $VIA_POWER
    $VIA_SIGNAL
    (spare
+    PS6
    )
   )
   (rule
@@ -51,27 +52,28 @@
   )
  )
  (placement
-  (component "CONN-DIL8_PWM1V" (place PWM1V 33.02000 -10.16000 front -90))
+  (component "CONN-DIL8_PWM1V" (place PWM1V 33.02000 -11.68400 front -90))
   (component "CONN-DIL8_PWM2V" (place PWM2V 33.02000 -22.86000 front -90))
-  (component "CONN-SIL4_1-4" (place "1-4" 30.48000 -10.16000 front 270))
+  (component "CONN-SIL4_1-4" (place "1-4" 30.48000 -11.68400 front 270))
   (component "CONN-SIL4_5-8" (place "5-8" 30.48000 -22.86000 front 270))
-  (component "CONN-SIL9_RX" (place RX 3.81000 -10.16000 front -90))
-  (component "CONN-SIL5_TTL" (place TTL 8.89000 -10.16000 front 0))
-  (component "CONN-SIL5_IO" (place IO 26.67000 -16.51000 front -90))
-  (component "QFP80P900X900X120-32_MCU" (place MCU 16.84001 -23.34000 front 0))
-  (component 0805_R_IMU_POWER (place R_IMU_POWER 27.53360 -10.16000 front 180))
-  (component XTAL18_16M (place 16M 7.62000 -27.94000 front 90))
-  (component 0805_C1 (place C1 10.56640 -30.48000 front 0))
-  (component 0805_C2 (place C2 6.75640 -19.05000 front 0))
-  (component 0805_C_POWER_1 (place C_POWER_1 26.67000 -30.48000 front 90))
-  (component "ELEC-RAD10_C_POWER_2" (place C_POWER_2 22.86000 -30.48000 front 90))
-  (component 0805_R_LED (place R_LED 24.13000 -19.05000 front 180))
-  (component 0805_LED (place LED 21.99640 -16.51000 front 0))
-  (component 0805_R_RESET (place R_RESET 21.59000 -10.16000 front 0))
-  (component 0805_R_RX (place R_RX 11.43000 -16.10360 front 90))
-  (component 0805_R_TX (place R_TX 13.97000 -16.10360 front 90))
-  (component "CONN-SIL5_IMU_1" (place IMU_1 26.67000 -13.97000 front 180))
-  (component "CONN-SIL2_IMU_2" (place IMU_2 8.89000 -13.97000 front 180))
+  (component "CONN-SIL5_TTL" (place TTL 9.52500 -10.16000 front 0))
+  (component "CONN-SIL5_IO" (place IO 26.31440 -17.39900 front -90))
+  (component "QFP80P900X900X120-32_MCU" (place MCU 18.26000 -22.05999 front 0))
+  (component 0805_R_IMU_POWER (place R_IMU_POWER 21.99640 -10.41400 front 0))
+  (component XTAL18_16M (place 16M 10.16000 -27.94000 front 90))
+  (component 0805_C1 (place C1 13.97000 -28.80360 front 90))
+  (component 0805_C2 (place C2 8.89000 -17.37360 front 90))
+  (component 0805_C_POWER_1 (place C_POWER_1 23.49500 -26.41600 front -90))
+  (component 0805_R_LED (place R_LED 15.51940 -15.36700 front 0))
+  (component 0805_LED (place LED 22.63140 -15.36700 front 0))
+  (component 0603_R_RESET (place R_RESET 11.17600 -12.21740 front -90))
+  (component 0603_R_RX (place R_RX 14.22400 -13.97000 front 90))
+  (component 0603_R_TX (place R_TX 12.70000 -13.97000 front 90))
+  (component "CONN-SIL5_IMU_1" (place IMU_1 26.67000 -12.70000 front 180))
+  (component "CONN-SIL2_IMU_2" (place IMU_2 8.89000 -12.70000 front 180))
+  (component "CONN-SIL7_RX_5" (place RX_5 6.35000 -15.24000 front -90))
+  (component CAPMP3216X180_C_TANT_3216 (place C_TANT_3216 31.36900 -9.27100 front 0
+  ))
  )
  (library
   (image "CONN-DIL8_PWM1V" (side front)
@@ -109,18 +111,6 @@
    (pin PS0 (rotate 0) 1 2.54000 0.00000)
    (pin PS0 (rotate 0) 2 5.08000 0.00000)
    (pin PS0 (rotate 0) 3 7.62000 0.00000)
-  )
-  (image "CONN-SIL9_RX" (side front)
-   (outline (rect TOP -1.37160 -1.37160 21.69160 1.37160))
-   (pin PS0 (rotate 0) 0 0.00000 0.00000)
-   (pin PS0 (rotate 0) 1 2.54000 0.00000)
-   (pin PS0 (rotate 0) 2 5.08000 0.00000)
-   (pin PS0 (rotate 0) 3 7.62000 0.00000)
-   (pin PS0 (rotate 0) 4 10.16000 0.00000)
-   (pin PS0 (rotate 0) 5 12.70000 0.00000)
-   (pin PS0 (rotate 0) 6 15.24000 0.00000)
-   (pin PS0 (rotate 0) 7 17.78000 0.00000)
-   (pin PS0 (rotate 0) 8 20.32000 0.00000)
   )
   (image "CONN-SIL5_TTL" (side front)
    (outline (rect TOP -1.37160 -1.37160 11.53160 1.37160))
@@ -198,11 +188,6 @@
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS2 (rotate 0) 1 2.13360 0.00000)
   )
-  (image "ELEC-RAD10_C_POWER_2" (side front)
-   (outline (rect TOP -1.37160 -2.64160 3.91160 2.64160))
-   (pin PS3 (rotate 0) 0 0.00000 0.00000)
-   (pin PS3 (rotate 0) 1 2.54000 0.00000)
-  )
   (image 0805_R_LED (side front)
    (outline (rect TOP -0.50800 -0.73660 2.64160 0.68580))
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
@@ -213,20 +198,20 @@
    (pin PS2 (rotate 0) 0 0.00000 0.00000)
    (pin PS2 (rotate 0) 1 2.13360 0.00000)
   )
-  (image 0805_R_RESET (side front)
-   (outline (rect TOP -0.50800 -0.73660 2.64160 0.68580))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS2 (rotate 0) 1 2.13360 0.00000)
+  (image 0603_R_RESET (side front)
+   (outline (rect TOP -0.44450 -0.50800 2.17170 0.50800))
+   (pin PS4 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 1.72720 0.00000)
   )
-  (image 0805_R_RX (side front)
-   (outline (rect TOP -0.50800 -0.73660 2.64160 0.68580))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS2 (rotate 0) 1 2.13360 0.00000)
+  (image 0603_R_RX (side front)
+   (outline (rect TOP -0.44450 -0.50800 2.17170 0.50800))
+   (pin PS4 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 1.72720 0.00000)
   )
-  (image 0805_R_TX (side front)
-   (outline (rect TOP -0.50800 -0.73660 2.64160 0.68580))
-   (pin PS2 (rotate 0) 0 0.00000 0.00000)
-   (pin PS2 (rotate 0) 1 2.13360 0.00000)
+  (image 0603_R_TX (side front)
+   (outline (rect TOP -0.44450 -0.50800 2.17170 0.50800))
+   (pin PS4 (rotate 0) 0 0.00000 0.00000)
+   (pin PS4 (rotate 0) 1 1.72720 0.00000)
   )
   (image "CONN-SIL5_IMU_1" (side front)
    (outline (rect TOP -1.37160 -1.37160 11.53160 1.37160))
@@ -240,6 +225,21 @@
    (outline (rect TOP -1.37160 -1.37160 3.91160 1.37160))
    (pin PS0 (rotate 0) 0 0.00000 0.00000)
    (pin PS0 (rotate 0) 1 2.54000 0.00000)
+  )
+  (image "CONN-SIL7_RX_5" (side front)
+   (outline (rect TOP -1.37160 -1.37160 16.61160 1.37160))
+   (pin PS0 (rotate 0) 0 0.00000 0.00000)
+   (pin PS0 (rotate 0) 1 2.54000 0.00000)
+   (pin PS0 (rotate 0) 2 5.08000 0.00000)
+   (pin PS0 (rotate 0) 3 7.62000 0.00000)
+   (pin PS0 (rotate 0) 4 10.16000 0.00000)
+   (pin PS0 (rotate 0) 5 12.70000 0.00000)
+   (pin PS0 (rotate 0) 6 15.24000 0.00000)
+  )
+  (image CAPMP3216X180_C_TANT_3216 (side front)
+   (outline (rect TOP -1.30000 -1.17500 3.77500 1.45000))
+   (pin PS5 (rotate 90) 0 0.00000 0.00000)
+   (pin PS5 (rotate 90) 1 2.60000 0.00000)
   )
   (padstack PS0 (absolute on)
    (shape (rect TOP -1.01600 -1.01600 1.01600 1.01600))
@@ -279,6 +279,26 @@
    (shape (circle I14 2.03200 0 0))
    (shape (circle BOT 2.03200 0 0))
   )
+  (padstack PS4 (absolute on) (shape (rect TOP -0.44450 -0.44450 0.44450 0.44450)))
+  (padstack PS5 (absolute on) (shape (rect TOP -0.62230 -0.90170 0.62230 0.90170)))
+  (padstack PS6 (absolute on)
+   (shape (circle TOP 0.76200 0 0))
+   (shape (circle I1 0.76200 0 0))
+   (shape (circle I2 0.76200 0 0))
+   (shape (circle I3 0.76200 0 0))
+   (shape (circle I4 0.76200 0 0))
+   (shape (circle I5 0.76200 0 0))
+   (shape (circle I6 0.76200 0 0))
+   (shape (circle I7 0.76200 0 0))
+   (shape (circle I8 0.76200 0 0))
+   (shape (circle I9 0.76200 0 0))
+   (shape (circle I10 0.76200 0 0))
+   (shape (circle I11 0.76200 0 0))
+   (shape (circle I12 0.76200 0 0))
+   (shape (circle I13 0.76200 0 0))
+   (shape (circle I14 0.76200 0 0))
+   (shape (circle BOT 0.76200 0 0))
+  )
   (padstack $VIA_POWER (absolute on)
    (shape (circle TOP 0.76200 0 0))
    (shape (circle I1 0.76200 0 0))
@@ -317,19 +337,19 @@
   )
  )
  (network
-  (net "#00011"
-   (circuit
-    (use_layer TOP BOT)
-    (use_via $VIA_SIGNAL)
-   )
-   (pins TTL-0 R_RX-1)
-  )
   (net "#00012"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
    (pins TTL-1 R_TX-1)
+  )
+  (net "#00013"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via $VIA_SIGNAL)
+   )
+   (pins TTL-2 R_RX-1)
   )
   (net "#00020"
    (circuit
@@ -338,7 +358,7 @@
    )
    (pins R_LED-1 LED-0)
   )
-  (net "#00068"
+  (net "#00061"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
@@ -364,8 +384,8 @@
     (use_layer TOP BOT)
     (use_via $VIA_POWER)
    )
-    (pins PWM1V-4 PWM1V-5 PWM1V-6 PWM1V-7 PWM2V-4 PWM2V-5 PWM2V-6 PWM2V-7 RX-0 RX-8 TTL-3
-    IO-4 MCU-2 MCU-4 MCU-20 C1-0 C2-1 C_POWER_1-1 C_POWER_2-1 LED-1 IMU_1-2)
+    (pins PWM1V-4 PWM1V-5 PWM1V-6 PWM1V-7 PWM2V-4 PWM2V-5 PWM2V-6 PWM2V-7 TTL-3 IO-4 MCU-2
+    MCU-4 MCU-20 C1-0 C2-1 C_POWER_1-1 LED-1 IMU_1-2 RX_5-0 C_TANT_3216-1)
   )
   (net "LED"
    (circuit
@@ -393,35 +413,35 @@
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins RX-3 MCU-1)
+   (pins MCU-1 RX_5-3)
   )
   (net "PWMIN2"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins RX-4 MCU-8)
+   (pins MCU-8 RX_5-4)
   )
   (net "PWMIN3"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins RX-2 MCU-31)
+   (pins MCU-31 RX_5-2)
   )
   (net "PWMIN4"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins RX-5 MCU-9)
+   (pins MCU-9 RX_5-5)
   )
   (net "PWMIN5"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins RX-6 MCU-10)
+   (pins MCU-10 RX_5-6)
   )
   (net "PWMO1"
    (circuit
@@ -449,7 +469,7 @@
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins "1-4"-0 MCU-0)
+   (pins "1-4"-3 MCU-0)
   )
   (net "PWMO5"
    (circuit
@@ -463,28 +483,28 @@
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins "1-4"-3 MCU-22)
+   (pins "1-4"-2 MCU-22)
   )
   (net "PWMO7"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins "1-4"-2 MCU-23)
+   (pins "1-4"-1 MCU-23)
   )
   (net "PWMO8"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins "1-4"-1 MCU-24)
+   (pins "1-4"-0 MCU-24)
   )
   (net "RESET"
    (circuit
     (use_layer TOP BOT)
     (use_via $VIA_SIGNAL)
    )
-   (pins TTL-4 MCU-28 R_RESET-0)
+   (pins TTL-0 MCU-28 R_RESET-0)
   )
   (net "RXD"
    (circuit
@@ -519,8 +539,8 @@
     (use_layer TOP BOT)
     (use_via $VIA_POWER)
    )
-    (pins PWM1V-0 PWM1V-1 PWM1V-2 PWM1V-3 PWM2V-0 PWM2V-1 PWM2V-2 PWM2V-3 RX-1 RX-7 TTL-2
-     IO-2 MCU-3 MCU-5 MCU-17 MCU-19 R_IMU_POWER-0 C_POWER_1-0 C_POWER_2-0 R_RESET-1 IMU_1-0
+    (pins PWM1V-0 PWM1V-1 PWM1V-2 PWM1V-3 PWM2V-0 PWM2V-1 PWM2V-2 PWM2V-3 TTL-4 IO-2 MCU-3
+     MCU-5 MCU-17 MCU-19 R_IMU_POWER-0 C_POWER_1-0 R_RESET-1 IMU_1-0 RX_5-1 C_TANT_3216-0
    )
   )
   (class POWER
@@ -539,10 +559,10 @@
    )
   )
   (class SIGNAL
-   "#00011"
    "#00012"
+   "#00013"
    "#00020"
-   "#00068"
+   "#00061"
    "ALARM"
    "BATT"
    "LED"
@@ -582,5 +602,262 @@
   )
  )
  (wiring
+   (wire (path TOP 0.38100 12.70000 -11.17600 12.70000 -12.24280) (net "#00012") (type protect)
+  )
+   (wire (path TOP 0.38100 12.06500 -10.16000 12.70000 -11.17600) (net "#00012") (type protect)
+  )
+   (wire (path TOP 0.38100 14.22400 -11.17600 14.22400 -12.24280) (net "#00013") (type protect)
+  )
+   (wire (path TOP 0.38100 14.60500 -10.16000 14.22400 -11.17600) (net "#00013") (type protect)
+  )
+   (wire (path TOP 0.25400 17.65300 -15.36700 19.93900 -15.36700 19.96440 -15.39240)
+   (net "#00020"))
+   (wire (path TOP 0.25400 21.48840 -15.39240 21.51380 -15.36700 22.63140 -15.36700)
+   (net "#00020") (type protect))
+   (wire (path TOP 0.76200 24.13000 -10.41400 24.13000 -12.70000) (net "#00061") (type protect)
+  )
+   (wire (path TOP 0.25400 25.29840 -17.01800 24.76500 -17.01800 24.13000 -16.38300 21.33600 -16.38300
+    20.70100 -17.01800 20.70100 -17.51069 20.66000 -18.25999) (net "BATT") (type protect)
+  )
+   (wire (path TOP 0.25400 26.31440 -17.39900 25.29840 -17.01800) (net "BATT") (type protect)
+  )
+   (wire (path TOP 0.25400 15.54480 -22.86000 15.54480 -21.25999 14.46000 -21.25999)
+   (net "GND"))
+  (wire (path TOP 0.25400 15.54480 -22.86000 14.45999 -22.86000) (net "GND"))
+   (wire (path TOP 0.76200 35.56000 -11.68400 35.94100 -11.30300 35.94100 -9.90600 35.17900 -9.14400
+   33.90900 -9.14400 33.96900 -9.27100) (net "GND") (type protect))
+   (wire (path TOP 0.38100 6.35000 -15.24000 8.89000 -15.24000) (net "GND") (type protect)
+  )
+   (wire (path TOP 0.38100 21.59000 -12.70000 21.59000 -13.97000 21.84400 -14.22400 24.38400 -14.22400
+    24.63800 -14.47800 24.63800 -15.36700 24.76500 -15.36700) (net "GND") (type protect)
+  )
+   (wire (path TOP 0.25400 26.31440 -27.55900 23.49500 -27.55900 23.49500 -28.54960)
+   (net "GND") (type protect))
+   (wire (path TOP 0.25400 22.25040 -25.25999 15.73561 -25.25999 15.69720 -25.29840)
+   (net "LED"))
+  (wire (path TOP 0.25400 22.25040 -26.21280 22.25040 -25.25999) (net "LED"))
+   (wire (path TOP 0.25400 13.56360 -16.45920 13.46200 -16.35760 13.46200 -13.10640 15.08760 -13.10640
+   15.08760 -14.02080 15.51940 -14.45260 15.51940 -15.36700) (net "LED"))
+  (wire (path TOP 0.25400 22.25040 -25.25999 22.86000 -25.25999) (net "LED"))
+   (wire (path TOP 0.38100 10.16000 -22.86000 10.16000 -21.84400 10.16000 -18.64360 8.89000 -17.37360
+  ) (net "OSC1") (type protect))
+   (wire (path TOP 0.38100 14.45999 -24.45999 11.75999 -24.45999 10.16000 -22.86000)
+   (net "OSC1") (type protect))
+   (wire (path TOP 0.38100 13.97000 -26.67000 11.43000 -26.67000 10.16000 -27.94000)
+   (net "OSC2") (type protect))
+   (wire (path TOP 0.38100 14.46000 -25.25999 13.97000 -25.74999 13.97000 -26.67000)
+   (net "OSC2") (type protect))
+   (wire (path TOP 0.25400 15.86000 -26.65999 15.87500 -26.54300) (net "PWMIN2") (type protect)
+  )
+   (wire (path TOP 0.38100 15.86000 -26.65999 15.74800 -26.67000 14.60500 -27.81300 12.95400 -27.81300
+    11.17600 -29.59100 9.01700 -29.59100 8.38200 -28.95600 8.38200 -26.54300 7.36600 -25.52700
+   6.35000 -25.40000) (net "PWMIN2") (type protect))
+   (wire (path TOP 0.38100 16.65999 -26.65999 16.76400 -27.30500 16.76400 -29.33700 15.74800 -30.35300
+   12.82700 -30.35300) (net "PWMIN4") (type protect))
+   (wire (path TOP 0.38100 17.46000 -26.65999 17.52600 -27.05100 17.52600 -29.85501 15.62100 -31.76001
+    8.44800 -31.76001 7.55900 -30.87101 7.09333 -30.87101 6.35000 -30.48000) (net "PWMIN5")
+   (type protect))
+   (wire (path TOP 0.25400 30.48000 -22.86000 29.08300 -22.86000 27.81300 -24.13000 27.81300 -29.03220
+    27.12720 -29.71800 22.09800 -29.71800 21.46000 -29.08000 21.46000 -26.65999) (net "PWMO1")
+   (type protect))
+   (wire (path TOP 0.25400 30.48000 -27.94000 29.08300 -27.94000 28.82900 -28.19400 28.82900 -30.09900
+    27.94000 -30.98800 21.33600 -30.98800 19.86000 -29.51200 19.86000 -26.65999) (net "PWMO2")
+   (type protect))
+   (wire (path TOP 0.25400 30.48000 -30.48000 30.60700 -30.73400 29.21000 -30.73400 28.32100 -31.62300
+    20.95500 -31.62300 19.06000 -29.72800 19.06000 -26.65999) (net "PWMO3") (type protect)
+  )
+   (wire (path TOP 0.25400 30.48000 -25.40000 30.60700 -25.52700 29.08300 -25.52700 28.32100 -26.28900
+    28.32100 -29.59100 27.55900 -30.35300 21.71700 -30.35300 20.70100 -29.33700 20.70100 -27.40929
+   20.66000 -26.65999) (net "PWMO5") (type protect))
+   (wire (path TOP 0.25400 23.74900 -18.44000 24.13000 -18.92300 24.13000 -19.93900 23.62200 -20.44700
+    23.24100 -20.44700 22.35200 -20.45999 22.86000 -20.45999) (net "PWMO6") (type protect)
+  )
+   (wire (path TOP 0.25400 22.60600 -18.41500 22.60600 -19.66000 22.86000 -19.66000)
+   (net "PWMO7") (type protect))
+   (wire (path TOP 0.25400 21.46000 -18.26000 21.46000 -18.38700 21.46000 -18.26000)
+   (net "PWMO8") (type protect))
+   (wire (path TOP 0.25400 22.22500 -17.14500 21.62549 -17.81190 21.31859 -18.27650 21.46000 -18.26000
+  ) (net "PWMO8") (type protect))
+   (wire (path TOP 0.25400 18.13560 -16.91640 18.26000 -17.04080 18.26000 -18.26000)
+   (net "RESET"))
+   (wire (path TOP 0.38100 9.52500 -10.16000 10.13460 -11.17600 11.17600 -12.21740) (net "RESET")
+   (type protect))
+   (wire (path TOP 0.25400 19.06000 -18.25999 19.06000 -16.16440 19.05000 -16.15440)
+   (net "SCL"))
+   (wire (path TOP 0.38100 19.86000 -18.26000 19.93900 -18.16100 19.93900 -16.63700 20.70100 -15.87500
+    20.70100 -14.85900 20.06600 -14.22400 17.52600 -14.22400 16.51000 -13.20800 16.51000 -12.70000
+  ) (net "SDA") (type protect))
+   (wire (path TOP 0.25400 14.46000 -23.65999 19.20240 -23.65999 20.00239 -22.86000 21.79320 -22.86000
+  ) (net "VCC/VDD"))
+   (wire (path TOP 0.25400 21.79320 -22.86000 21.79320 -24.45999 22.86000 -24.45999)
+   (net "VCC/VDD"))
+   (wire (path TOP 0.25400 22.86000 -22.86000 24.61260 -22.86000 24.99360 -22.47900 26.31440 -22.47900
+  ) (net "VCC/VDD"))
+   (wire (path TOP 0.25400 22.86000 -24.45999 24.07920 -24.45999 24.53640 -24.91719 24.53640 -26.41600
+   23.49500 -26.41600) (net "VCC/VDD"))
+   (wire (path TOP 0.25400 14.46000 -23.65999 13.41120 -23.65999 13.41120 -22.06000 14.46000 -22.06000
+  ) (net "VCC/VDD"))
+   (wire (path TOP 0.76200 33.02000 -11.68400 33.02000 -11.04900 31.54257 -9.57157 31.36900 -9.27100
+  ) (net "VCC/VDD") (type protect))
+   (wire (path TOP 0.38100 9.90600 -16.25600 10.54100 -16.25600 11.17600 -15.62100 11.17600 -15.54480
+   11.17600 -15.39240) (net "VCC/VDD") (type protect))
+   (wire (path TOP 0.76200 26.92400 -12.19200 26.92400 -10.66800 26.92400 -10.36320)
+   (net "VCC/VDD") (type protect))
+   (wire (path TOP 0.38100 11.17600 -15.39240 11.17600 -13.94460) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.38100 6.35000 -17.78000 7.36600 -17.01800 8.12800 -16.25600 9.90600 -16.25600
+  ) (net "VCC/VDD") (type protect))
+   (wire (path TOP 0.76200 19.68500 -10.16000 20.70100 -10.41400 21.99640 -10.41400)
+   (net "VCC/VDD") (type protect))
+   (wire (path TOP 0.25400 26.67000 -12.70000 26.92400 -12.57300 26.92400 -12.44600)
+   (net "VCC/VDD") (type protect))
+   (wire (path TOP 0.76200 26.92400 -12.44600 27.05100 -12.31900 27.05100 -11.93800)
+   (net "VCC/VDD") (type protect))
+   (wire (path TOP 0.76200 26.67000 -12.70000 26.92400 -12.44600) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.38100 26.92400 -12.19200 27.05100 -11.93800) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.38100 26.67000 -12.70000 26.92400 -12.19200) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.25400 26.92400 -12.19200 26.92400 -12.44600) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.76200 26.92400 -10.36320 26.92400 -10.16000) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.25400 26.92400 -10.16000 26.79700 -10.28700) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.76200 19.68500 -9.39800 19.68500 -10.16000) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.76200 19.68500 -9.39800 19.68500 -9.01700 19.17700 -8.50900 5.71500 -8.50900
+    4.69900 -9.52500 4.69900 -17.14500 5.33400 -17.78000 6.35000 -17.78000) (net "VCC/VDD")
+   (type protect))
+   (wire (path TOP 0.76200 26.79700 -10.28700 25.01900 -8.50900 20.57400 -8.50900 19.68500 -9.39800
+  ) (net "VCC/VDD") (type protect))
+   (wire (path TOP 0.25400 21.79320 -22.86000 22.86000 -22.86000) (net "VCC/VDD") (type protect)
+  )
+   (wire (path TOP 0.38100 18.28800 -29.11840 18.26000 -29.09040 18.26000 -26.66000)
+   (net "ALARM") (type protect))
+   (wire (path TOP 0.38100 14.46000 -20.46000 14.09700 -20.44700 12.70000 -20.44700 11.91260 -21.23440
+   11.83640 -21.23440) (net "PWMIN1") (type protect))
+   (wire (path TOP 0.38100 15.86000 -18.25999 15.87500 -18.16100 13.46200 -18.16100 11.86180 -19.76120
+   11.78560 -19.76120) (net "PWMIN3") (type protect))
+   (wire (path TOP 0.25400 17.46000 -18.25999 17.46000 -17.22120 16.87580 -16.63700 14.73200 -16.63700
+   14.22400 -16.12900 14.22400 -13.97000) (net "RXD") (type protect))
+   (wire (path TOP 0.25400 16.66000 -18.26000 16.76400 -17.51070) (net "TXD") (type protect)
+  )
+   (wire (path TOP 0.25400 16.76400 -17.51070 16.76400 -17.39900 16.51000 -17.14500 12.82700 -17.14500
+   12.44600 -16.76400 12.44600 -14.41450) (net "TXD") (type protect))
+   (wire (path TOP 0.25400 12.44600 -14.41450 12.70000 -13.97000) (net "TXD") (type protect)
+  )
+   (wire (path TOP 0.25400 16.89100 -22.86000 15.54480 -22.86000) (net "GND") (type protect)
+  )
+   (wire (path TOP 0.25400 16.89100 -22.86000 17.65300 -22.09800 22.86000 -22.06000)
+   (net "GND") (type protect))
+   (wire (path TOP 0.25400 14.46000 -19.65999 14.46000 -19.83779 14.46000 -19.65999)
+   (net "PWMO4") (type protect))
+  (wire (path BOT 0.25400 19.96440 -15.39240 21.48840 -15.39240) (net "#00020"))
+   (wire (path BOT 0.76200 21.71700 -9.65200 21.71700 -9.44880) (net "GND") (type protect)
+  )
+   (wire (path BOT 0.76200 35.56000 -11.68400 35.56000 -10.16000 33.90900 -8.50900 22.86000 -8.50900
+   21.71700 -9.65200) (net "GND") (type protect))
+   (wire (path BOT 0.76200 21.71700 -9.65200 21.71700 -10.05840) (net "GND") (type protect)
+  )
+   (wire (path BOT 1.52400 35.56000 -19.30400 35.56000 -22.86000) (net "GND") (type protect)
+  )
+   (wire (path BOT 0.76200 21.71700 -10.05840 21.71700 -11.68400 21.59000 -12.70000)
+   (net "GND") (type protect))
+   (wire (path BOT 1.52400 35.56000 -14.22400 35.56000 -14.22399) (net "GND") (type protect)
+  )
+   (wire (path BOT 1.52400 35.56000 -14.22399 35.56000 -11.68400) (net "GND") (type protect)
+  )
+   (wire (path BOT 1.52400 35.56000 -16.76400 35.56000 -14.22400) (net "GND") (type protect)
+  )
+   (wire (path BOT 1.52400 35.56000 -19.30400 35.56000 -16.76400) (net "GND") (type protect)
+  )
+   (wire (path BOT 1.52400 35.56000 -25.40000 35.56000 -25.39999) (net "GND") (type protect)
+  )
+   (wire (path BOT 1.52400 35.56000 -22.86000 35.56000 -25.40000) (net "GND") (type protect)
+  )
+   (wire (path BOT 1.52400 35.56000 -25.40000 35.56000 -27.94000) (net "GND") (type protect)
+  )
+   (wire (path BOT 1.52400 35.56000 -27.94000 35.56000 -29.46400 35.56000 -30.48000)
+   (net "GND") (type protect))
+   (wire (path BOT 0.76200 21.71700 -9.44880 21.71700 -9.14400 21.08200 -8.50900 17.65300 -8.50900
+   17.14500 -9.01700) (net "GND") (type protect))
+   (wire (path BOT 0.76200 17.14500 -9.01700 17.14500 -8.95350 16.70050 -8.50900 5.71500 -8.50900
+    4.69900 -9.52500 4.69900 -14.73200 5.20700 -15.24000 6.35000 -15.24000) (net "GND")
+   (type protect))
+   (wire (path BOT 0.25400 17.14500 -9.01700 17.14500 -9.14400 17.14500 -10.16000) (net "GND")
+   (type protect))
+   (wire (path BOT 0.25400 15.69720 -25.29840 15.69720 -18.59280 13.56360 -16.45920)
+   (net "LED"))
+   (wire (path BOT 0.25400 26.31440 -19.93900 22.25040 -24.00300 22.25040 -26.21280)
+   (net "LED"))
+   (wire (path BOT 0.38100 12.82700 -30.35300 8.50900 -30.35300 7.74700 -29.59100 7.74700 -28.19400
+   7.49300 -27.94000 6.35000 -27.94000) (net "PWMIN4") (type protect))
+   (wire (path BOT 0.25400 30.48000 -16.76400 30.22600 -16.12900 29.08300 -16.12900 28.19400 -15.24000
+    24.38400 -15.24000 23.74900 -15.87500 23.74900 -18.44000) (net "PWMO6") (type protect)
+  )
+   (wire (path BOT 0.25400 22.60600 -18.41500 22.56408 -18.32794 22.60600 -18.41500)
+   (net "PWMO7") (type protect))
+   (wire (path BOT 0.25400 30.48000 -14.22400 30.48000 -13.84300 29.08300 -13.84300 28.19400 -14.73240
+    23.74900 -14.73365 22.98700 -15.49400 22.98700 -18.03487 22.60600 -18.41500) (net "PWMO7")
+   (type protect))
+   (wire (path BOT 0.25400 30.48000 -14.22400 30.48000 -14.35100) (net "PWMO7") (type protect)
+  )
+   (wire (path BOT 0.25400 30.48000 -11.68400 29.08300 -11.68400 28.19400 -12.57300 28.19400 -13.84300
+    27.81300 -14.22400 23.11400 -14.22400 22.22500 -15.11300 22.22500 -17.14500) (net "PWMO8")
+   (type protect))
+   (wire (path BOT 0.25400 9.52500 -10.16000 10.18540 -10.82040 10.18540 -14.32560 10.64260 -14.78280
+   17.67840 -14.78280 18.13560 -15.24000 18.13560 -16.91640) (net "RESET"))
+  (wire (path BOT 0.25400 19.05000 -16.15440 19.05000 -12.70000) (net "SCL"))
+   (wire (path BOT 0.25400 33.02000 -11.68400 31.69920 -10.36320 29.00680 -10.36320 26.67000 -12.70000
+  ) (net "VCC/VDD"))
+   (wire (path BOT 1.52400 33.02000 -14.22400 33.02000 -11.68400) (net "VCC/VDD") (type protect)
+  )
+   (wire (path BOT 1.52400 33.02000 -16.76400 33.02000 -14.22400) (net "VCC/VDD") (type protect)
+  )
+   (wire (path BOT 1.52400 33.02000 -19.30400 33.02000 -16.76400) (net "VCC/VDD") (type protect)
+  )
+   (wire (path BOT 1.52400 33.02000 -22.86000 33.02000 -25.40000) (net "VCC/VDD") (type protect)
+  )
+   (wire (path BOT 1.52400 33.02000 -25.40000 33.02000 -27.94000) (net "VCC/VDD") (type protect)
+  )
+   (wire (path BOT 1.52400 33.02000 -27.94000 33.02000 -29.46400 33.02000 -30.48000)
+   (net "VCC/VDD") (type protect))
+   (wire (path BOT 1.52400 33.02000 -21.48840 33.02000 -22.86000) (net "VCC/VDD") (type protect)
+  )
+   (wire (path BOT 1.52400 33.02000 -20.95500 33.02000 -20.70100 33.02000 -19.30400)
+   (net "VCC/VDD") (type protect))
+   (wire (path BOT 1.52400 33.02000 -20.95500 33.02000 -21.48840) (net "VCC/VDD") (type protect)
+  )
+   (wire (path BOT 0.76200 26.31440 -22.47900 27.43200 -22.22500 28.57500 -21.08200 32.89300 -21.08200
+   33.02000 -20.95500) (net "VCC/VDD") (type protect))
+   (wire (path BOT 0.25400 26.31440 -25.01900 26.28900 -24.89200) (net "ALARM") (type protect)
+  )
+   (wire (path BOT 0.38100 26.31440 -25.01900 28.32100 -27.03560 28.32100 -30.61700 27.30500 -31.63300
+    19.81200 -31.63300 18.28800 -30.10900 18.28800 -29.11840) (net "ALARM") (type protect)
+  )
+   (wire (path BOT 0.38100 11.83640 -21.23440 11.81100 -21.20900 9.27100 -21.20900 8.12800 -22.35200
+    6.47700 -22.35200 6.35000 -22.55520 6.35000 -22.86000) (net "PWMIN1") (type protect)
+  )
+   (wire (path BOT 0.38100 11.78560 -19.76120 11.73480 -19.81200 6.85800 -19.81200 6.35000 -20.32000
+  ) (net "PWMIN3") (type protect))
+   (wire (path BOT 0.25400 6.35000 -15.24000 15.49400 -15.24000 16.89100 -16.63700 16.89100 -22.86000
+  ) (net "GND") (type protect))
+  (via PS6 19.96440 -15.39240 (net "#00020"))
+  (via PS6 21.48840 -15.39240 (net "#00020"))
+  (via PS6 13.56360 -16.45920 (net "LED"))
+  (via PS6 15.69720 -25.29840 (net "LED"))
+  (via PS6 22.25040 -26.21280 (net "LED"))
+  (via PS6 12.82700 -30.35300 (net "PWMIN4"))
+  (via PS6 23.74900 -18.44000 (net "PWMO6"))
+  (via PS6 22.60600 -18.41500 (net "PWMO7"))
+  (via PS6 22.22500 -17.14500 (net "PWMO8"))
+  (via PS6 18.13560 -16.91640 (net "RESET"))
+  (via PS6 19.05000 -16.15440 (net "SCL"))
+  (via PS6 18.28800 -29.11840 (net "ALARM"))
+  (via PS6 11.83640 -21.23440 (net "PWMIN1"))
+  (via PS6 11.78560 -19.76120 (net "PWMIN3"))
+  (via PS6 16.89100 -22.86000 (net "GND"))
  )
 )
